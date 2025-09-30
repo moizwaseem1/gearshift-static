@@ -1,1 +1,91 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Contact</title>
+  <link href="https://fonts.google.com/share?selection.family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900|Roboto+Mono:ital,wght@0,100..700;1,100..700">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="container">
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+              <img src="https://cdn.prod.website-files.com/6677ef5c2f59c6148debf7e0/670c127ebfda26ab4b18882f_logo.svg">
+            </a> 
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="fleet.html">Fleet</a></li>
+                <li><a href="offers.html">Offers</a></li>
+                <li><a href="contact.html" class="btn btn-primary">Contact</a></li>
+            </ul>
+            
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                &#9776;
+            </button>
+        </nav>
+    </div>
+</header>
+  <main>
+    <section class="page-hero">
+        <div class="container">
+            <h1>Get In Touch</h1>
+            <p>Ready to book your dream car? Send us a message or find our office details below.</p>
+        </div>
+    </section>
+
+    <section class="contact-form-section section-padding">
+        <div class="container">
+            <div class="contact-grid">
+                <form id="contactForm" class="contact-form">
+                    <h2>Send Us a Message</h2>
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                        <small class="error-message"></small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                        <small class="error-message"></small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone (Optional)</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <small class="error-message"></small>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large">Send Enquiry</button>
+                    <p id="form-success" class="success-message"></p>
+                </form>
+
+                <div class="contact-info">
+                    <h2>Our Office</h2>
+                    <p class="info-item">Address: 123 Innovation Street, Downtown Dubai, Dubai, UAE</p>
+                    <p class="info-item">Phone: +971 12 345 6789</p>
+                    <p class="info-item">Email: info@gearshift.com</p>
+                    <div class="office-hours">
+                        <h4>Hours</h4>
+                        <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+                        <p>Saturday: 10:00 AM - 4:00 PM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+  <script src="script.js"></script>
+</body>
+</html>
 
