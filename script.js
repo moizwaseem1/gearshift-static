@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
             navLinks.classList.toggle('open');
             
             const isOpen = navLinks.classList.contains('open');
-            menuToggle.innerHTML = isOpen ? '&#10005;' : '&#9776;'; // X or Hamburger
+            menuToggle.innerHTML = isOpen ? '&#10005;' : '&#9776;'; 
         });
     }
 });
@@ -16,7 +16,6 @@ const contactForm = document.getElementById('contactForm');
 const formSuccess = document.getElementById('form-success');
 
 function validateEmail(email) {
-    // Simple regex for email format validation
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
 }
@@ -41,7 +40,7 @@ function checkRequired(inputs) {
 
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
-        e.preventDefault(); // Stop default submission
+        e.preventDefault(); 
 
         const requiredInputs = [
             document.getElementById('name'),
@@ -51,8 +50,7 @@ if (contactForm) {
         
         let isValid = checkRequired(requiredInputs);
         const emailInput = document.getElementById('email');
-
-        // Specific Email Validation
+        
         if (emailInput.value.trim() !== '' && !validateEmail(emailInput.value)) {
             emailInput.parentElement.classList.add('error');
             emailInput.parentElement.querySelector('.error-message').textContent = 'Email is not valid.';
@@ -60,16 +58,35 @@ if (contactForm) {
         }
 
         if (isValid) {
-            // Since this is a static site, we just display a success message
             contactForm.reset();
             formSuccess.textContent = "Thank you! Your inquiry has been sent (mock success).";
             formSuccess.style.display = 'block';
-
-            // Hide success message after 5 seconds
+            
             setTimeout(() => {
                 formSuccess.style.display = 'none';
             }, 5000);
         }
     });
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const filterToggles = document.querySelectorAll('.filter-toggle');
+
+    filterToggles.forEach(toggle => {
+        toggle.addEventListener('click', function() {
+            const parentDropdown = this.closest('.filter-dropdown');
+            
+            const isActive = parentDropdown.classList.contains('active');
+            
+            document.querySelectorAll('.filter-dropdown').forEach(dropdown => {
+                dropdown.classList.remove('active');
+            });
+            
+            if (!isActive) {
+                parentDropdown.classList.add('active');
+            }
+        });
+    });
+});
+
 
