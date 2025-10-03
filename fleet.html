@@ -1,81 +1,227 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fleet</title>
-  <link href="https://fonts.google.com/share?selection.family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900|Roboto+Mono:ital,wght@0,100..700;1,100..700">
-  <link rel="stylesheet" href="style.css">
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Fleet </title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    </head>
 <body>
-  <header class="main-header">
-    <div class="container">
-        <nav class="navbar">
-            <a href="index.html" class="logo">
-              <img src="https://cdn.prod.website-files.com/6677ef5c2f59c6148debf7e0/670c127ebfda26ab4b18882f_logo.svg">
-            </a> 
-            
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="fleet.html">Fleet</a></li>
-                <li><a href="offers.html">Offers</a></li>
-                <li><a href="contact.html" class="btn btn-primary">Contact</a></li>
-            </ul>
-            
-            <button class="menu-toggle" aria-label="Toggle navigation">
-                &#9776;
-            </button>
-        </nav>
-    </div>
-</header>
-  <main>
-    <section class="page-hero">
+    <header class="main-header">
         <div class="container">
-            <h1>Our Premium Fleet</h1>
-            <p>Choose from our curated collection of luxury and performance vehicles.</p>
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                  <img src="https://cdn.prod.website-files.com/6677ef5c2f59c6148debf7e0/670c127ebfda26ab4b18882f_logo.svg">
+                </a>
+              <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="fleet.html">Fleet</a></li>
+                    <li><a href="offers.html">Offers</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="fleet.html" class="btn btn-primary">RENT NOW</a></li>
+                </ul>
+              <button class="menu-toggle" aria-label="Toggle navigation">
+                    &#9776;
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-fleet">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1 class="hero-title"><span class="highlight">GearShift</span> Cars</h1>
+            <p class="hero-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam justo nec ligula eleifend efficitur.</p>
         </div>
     </section>
 
-    <section class="fleet-catalog section-padding">
-        <div class="container">
-            <div class="car-grid">
-                <article class="car-card">
-                    <img src="https://stimg.cardekho.com/images/carexteriorimages/930x620/Mercedes-Benz/S-Class/10853/1690451611932/front-left-side-47.jpg" alt="Luxury Sedan" class="car-image">
-                    <div class="card-content">
-                        <h3 class="car-name">Mercedes-Benz S-Class</h3>
-                        <p class="car-spec">
-                            <span class="spec-detail">Capacity: 4</span> 
-                            <span class="spec-detail">Transmission: Auto</span>
-                        </p>
-                        <div class="car-price">
-                            <span class="price-value">$350</span> / day
-                        </div>
-                        <a href="#" class="btn btn-primary btn-small">Book Now</a>
-                    </div>
-                </article>
+    <main>
+        <section class="fleet-listing-section section-padding">
+            <div class="container">
                 
-                <article class="car-card">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiMHBK5nU-or4-bEMKIl2AJYzMqTuZug3sJyCmDLdfwIk8Dj-r3bBi-nvw&s=10" alt="Sports Car" class="car-image">
-                    <div class="card-content">
-                        <h3 class="car-name">Porsche 911 Carrera</h3>
-                        <p class="car-spec">
-                            <span class="spec-detail">Capacity: 2</span> 
-                            <span class="spec-detail">Transmission: PDK</span>
-                        </p>
-                        <div class="car-price">
-                            <span class="price-value">$550</span> / day
+                <div class="filter-card-wrapper">
+                    
+                    <div class="filter-dropdown active">
+                        <button class="filter-toggle">Select Car Type <span class="arrow-icon"></span></button>
+                        <div class="filter-content">
+                            <ul class="filter-list">
+                                <li>SUV</li>
+                                <li>Luxury</li>
+                                <li>Sports</li>
+                                <li>Convertible</li>
+                            </ul>
                         </div>
-                        <a href="#" class="btn btn-primary btn-small">Book Now</a>
                     </div>
-                </article>
 
+                    <div class="filter-dropdown">
+                        <button class="filter-toggle">Select Car Brand <span class="arrow-icon"></span></button>
+                        <div class="filter-content">
+                            <ul class="filter-list">
+                                <li>Audi</li>
+                                <li>Porsche</li>
+                                <li>BMW</li>
+                                <li>Mercedes Benz</li>
+                                <li>Ferrari</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="filter-dropdown">
+                        <button class="filter-toggle">Select Pickup Location <span class="arrow-icon"></span></button>
+                        <div class="filter-content">
+                            <ul class="filter-list">
+                                <li>Palm Jumeirah</li>
+                                <li>JBR</li>
+                                <li>Downtown Dubai</li>
+                                <li>Dubai Marina</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="filter-dropdown">
+                        <button class="filter-toggle">Select Feature <span class="arrow-icon"></span></button>
+                        <div class="filter-content">
+                            <ul class="filter-list">
+                                <li>Sunroof</li>
+                                <li>Wireless Charging</li>
+                                <li>Parking Sensors</li>
+                                <li>Rearview Camera</li>
+                                <li>Built-in GPS</li>
+                                <li>Cruise Control</li>
+                                <li>Bluetooth Audio</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
+
+                <div class="car-listing-grid">
+
+                    <div class="car-card">
+                        <div class="car-image-container">
+                            <img src="https://images.unsplash.com/photo-1546768292-fb12f6c92568?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Ferrari 458" class="car-image">
+                            <span class="car-year">2021</span>
+                        </div>
+                        <div class="car-details">
+                            <h3 class="car-title">Ferrari 458</h3>
+                            <p class="car-price">AED <span class="price-bold">3900</span> / DAY</p>
+                            
+                            <div class="car-specs">
+                                <div class="spec-item">
+                                    <img src="https://cdn.prod.website-files.com/6677ef5c2f59c6148debf7e0/6677ef5c2f59c6148debf80e_mileage.svg" alt="Mileage" class="icon-image">
+                                    <span class="spec-value">6100</span>
+                                </div>
+                                <div class="spec-item">
+                                    <img src="https://cdn.prod.website-files.com/6677ef5c2f59c6148debf7e0/6677ef5c2f59c6148debf82b_transmission.svg" alt="Transmission" class="icon-image">
+                                    <span class="spec-value">Manual</span>
+                                </div>
+                                <div class="spec-item">
+                                    <img src="https://cdn.prod.website-files.com/6677ef5c2f59c6148debf7e0/6677ef5c2f59c6148debf82a_seats.svg" alt="Passengers" class="icon-image">
+                                    <span class="spec-value">2</span>
+                                </div>
+                                <div class="spec-item">
+                                    <img src="https://cdn.prod.website-files.com/6677ef5c2f59c6148debf7e0/6677ef5c2f59c6148debf7fd_baggage.svg" alt="Luggage" class="icon-image">
+                                    <span class="spec-value">2</span>
+                                </div>
+                            </div>
+
+                            <a href="#" class="btn btn-primary btn-full-width">See Full Details</a>
+                        </div>
+                    </div>
+
+                    <div class="car-card">
+                        <div class="car-image-container">
+                            <img src="https://images.unsplash.com/photo-1615839399574-c842427f9862?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Porsche 992" class="car-image">
+                            <span class="car-year">2024</span>
+                        </div>
+                        <div class="car-details">
+                            <h3 class="car-title">Porsche 992</h3>
+                            <p class="car-price">AED <span class="price-bold">2100</span> / DAY</p>
+                            
+                            <div class="car-specs">
+                                <div class="spec-item">
+                                    <img src="https://cdn.prod.website-files.com/6677ef5c2f59c6148debf7e0/6677ef5c2f59c6148debf80e_mileage.svg" alt="Mileage" class="icon-image">
+                                    <span class="spec-value">5500</span>
+                                </div>
+                                <div class="spec-item">
+                                    <img src="https://cdn.prod.website-files.com/6677ef5c2f59c6148debf7e0/6677ef5c2f59c6148debf82b_transmission.svg" alt="Transmission" class="icon-image">
+                                    <span class="spec-value">Automatic</span>
+                                </div>
+                                <div class="spec-item">
+                                    <img src="https://cdn.prod.website-files.com/6677ef5c2f59c6148debf7e0/6677ef5c2f59c6148debf82a_seats.svg" alt="Passengers" class="icon-image">
+                                    <span class="spec-value">2</span>
+                                </div>
+                                <div class="spec-item">
+                                    <img src="https://cdn.prod.website-files.com/6677ef5c2f59c6148debf7e0/6677ef5c2f59c6148debf7fd_baggage.svg" alt="Luggage" class="icon-image">
+                                    <span class="spec-value">3</span>
+                                </div>
+                            </div>
+
+                            <a href="#" class="btn btn-primary btn-full-width">See Full Details</a>
+                        </div>
+                    </div>
+                    
+                    </div>
+
+                <div class="pagination-footer">
+                    <button class="btn btn-secondary">Previous</button>
+                    </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-primary">
+              
+              <div class="footer-logo-black">
+                    <a href="index.html" class="footer-logo-img-wrapper">
+                      <img src="https://cdn.prod.website-files.com/6677ef5c2f59c6148debf7e0/670c127ebfda26ab4b18882f_logo.svg" alt="GearShift Logo" class="footer-logo-image">
+                    </a>
+                      <p class="footer-tagline">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam justo nec ligula eleifend efficitur.</p>
+                    </div>
+                
+                    <div class="social-links">
+    <a href="https://x.com" class="social-icon">
+        <img src="https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/logo/social-x-fill-3rwa8j21aur9zhodgo3nui.png/social-x-fill-43db2c8yhgtk6jvl72isgk.png?_a=DATAg1AAZAA0" alt="X" class="social-logo">
+    </a>
+    <a href="https://instagram.com" class="social-icon">
+        <img src="https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/3/instagram-iszk7s2ak1xrlg7set1dh.png/instagram-a0etv3l1b4i6anef7nme1m.png?_a=DATAg1AAZAA0" alt="Instagram" class="social-logo">
+    </a>
+    <a href="https://facebook.com" class="social-icon">
+        <img src="https://assets.streamlinehq.com/image/private/w_240,h_240,ar_1/f_auto/v1/icons/social-medias/social-media-facebook-20r4wgdxx18oejrcwcrep.png/social-media-facebook-t6azy2cxq3ff1t3s8vuwn.png?_a=DATAg1AAZAA0" alt="Facebook" class="social-logo">
+    </a>
+    <a href="https://whatsapp.com" class="social-icon">
+        <img src="https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/vector-icons/whatsapp-line-568o5ykq6oyotjktzytmzp.png/whatsapp-line-t8i559yekqyh6y70xsnsq.png?_a=DATAg1AAZAA0" alt="WhatsApp" class="social-logo">
+    </a>
+</div>
+                    
+                    <div class="newsletter-block">
+                        <h4 class="newsletter-title">Subscribe to our newsletter</h4>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="example@gmail.com" required>
+                            <button type="submit" class="btn btn-primary btn-submit">SUBMIT</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="footer-secondary">
+                    <h4 class="pages-title">Pages</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="fleet.html">Our Fleet</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div></footer>
+          <div class="footer-divider"></div>
+          <p class="copyright">© 2025 GearShift. All rights reserved. | Design by Moiz Waseem </p>
         </div>
-    </section>
-</main>
-  <script src="script.js"></script>
+    </footer>
+<script src="script.js"></script>
 </body>
 </html>
-
