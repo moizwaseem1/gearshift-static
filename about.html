@@ -1,62 +1,222 @@
 <!DOCTYPE html>
-
 <html>
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About</title>
-  <link href="https://fonts.google.com/share?selection.family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900|Roboto+Mono:ital,wght@0,100..700;1,100..700">
-  <link rel="stylesheet" href="style.css">
+    <meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1.0">
+    <title>About GearShift </title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="main-header">
-    <div class="container">
-        <nav class="navbar">
-            <a href="index.html" class="logo">
-              <img src="https://cdn.prod.website-files.com/6677ef5c2f59c6148debf7e0/670c127ebfda26ab4b18882f_logo.svg">
-            </a> 
-            
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="fleet.html">Fleet</a></li>
-                <li><a href="offers.html">Offers</a></li>
-                <li><a href="contact.html" class="btn btn-primary">Contact</a></li>
-            </ul>
-            
-            <button class="menu-toggle" aria-label="Toggle navigation">
-                &#9776;
-            </button>
-        </nav>
-    </div>
-</header>
-  <main>
-    <section class="page-hero">
+    <header class="main-header">
         <div class="container">
-            <h1>Our Commitment to Excellence</h1>
-            <p>Learn about our mission, our values, and the people who make GearShift special.</p>
-        </div>
-    </section>
-
-    <section class="about-content section-padding">
-        <div class="container section-content-grid">
-            <div>
-                <h2>The GearShift Story</h2>
-                <p>GearShift was founded five years ago on the principle that renting a car should be as luxurious and seamless as driving your own. We noticed a gap in the market for premium service combined with a truly exclusive fleet.</p>
-                <p>Today, we operate with a dedicated team committed to personalized customer service, ensuring every rental experience, from booking to drop-off, is flawless. We hand-select every vehicle to guarantee peak performance and immaculate condition.</p>
-            </div>
-            <div class="sidebar-info">
-                <h4>Our Values</h4>
-                <ul>
-                    <li><span class="highlight">Integrity:</span> Transparent pricing and policies.</li>
-                    <li><span class="highlight">Quality:</span> Only the newest and best models.</li>
-                    <li><span class="highlight">Service:</span> 24/7 dedicated support.</li>
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <img src="https://cdn.prod.website-files.com/6677ef5c2f59c6148debf7e0/670c127ebfda26ab4b18882f_logo.svg" alt="GearShift Logo">
+                </a> 
+                
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About</a></li> 
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="fleet.html">Fleet</a></li>
+                    <li><a href="offers.html">Offers</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="fleet.html" class="btn btn-primary">Contact</a></li>
                 </ul>
-            </div>
+                
+                <button class="menu-toggle" aria-label="Toggle navigation">
+                    &#9776;
+                </button>
+            </nav>
         </div>
-    </section>
-</main>
-  <script src="script.js"></script>
+    </header>
+
+    <main>
+        <section class="page-hero about-hero">
+            <div class="container hero-content">
+                <h1 class="hero-title">About <span class="highlight">GearShift</span></h1>
+                <p class="hero-subtitle-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam justo nec ligula eleifend efficitur.</p>
+            </div>
+        </section>
+
+        <!-- 2. OUR JOURNEY & MISSION SECTION -->
+        <section class="about-journey section-padding text-dark-content">
+            <div class="container section-content-narrow">
+                <h2 class="heading-light">Our Journey</h2>
+                <p class="paragraph-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+                <h2 class="heading-light mt-6">Our Mission</h2>
+                <p class="paragraph-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                
+                <!-- Image section matching the design -->
+                <div class="image-full-width mt-10">
+                    <img src="https://images.unsplash.com/photo-1696435266729-c5e1c1b52c93?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="A collection of luxury sports cars in a parking lot, representing the GearShift fleet." class="rounded-lg shadow-xl">
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. FOUNDER & LEADERSHIP SECTION -->
+        <section class="about-leadership section-padding bg-light-gray text-dark-content">
+            <div class="container section-content-narrow">
+                <h2 class="heading-light">Meet Our Founder</h2>
+                <p class="paragraph-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                
+                <div class="founder-image-wrapper mt-8 mb-10">
+                    <img src="https://images.pexels.com/photos/5439427/pexels-photo-5439427.jpeg" alt="Portrait of the company founder in an office setting." class="rounded-lg shadow-xl">
+                </div>
+
+                <h2 class="heading-light">Leadership & Expertise</h2>
+                <p class="paragraph-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </section>
+
+        <!-- 4. STATS SECTION (Uses the counter block design) -->
+        <section class="about-stats section-padding text-center text-dark-content">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number text-primary">10+</span>
+                        <h4 class="stat-label">Years of Experience</h4>
+                        <p class="stat-text">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number text-primary">1000+</span>
+                        <h4 class="stat-label">Happy Clients</h4>
+                        <p class="stat-text">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number text-primary">200+</span>
+                        <h4 class="stat-label">Vehicles</h4>
+                        <p class="stat-text">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number text-primary">10+</span>
+                        <h4 class="stat-label">Locations</h4>
+                        <p class="stat-text">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. CORE VALUES SECTION (Uses the circular icon blocks design) -->
+        <section class="core-values section-padding bg-light-gray text-center text-dark-content">
+            <div class="container">
+                <h2 class="heading-light mb-10">Our Core Values</h2>
+                <div class="value-blocks-grid">
+                    <div class="value-item">
+                        <div class="circle-icon bg-primary">
+                            <!-- Image of a star and ribbon icon for 'Excellence' -->
+                            <img src="https://cdn.prod.website-files.com/6677ef5c2f59c6148debf7e0/6677ef5c2f59c6148debf816_excellence.png" alt="Excellence Icon" class="icon-image-lg">
+                        </div>
+                        <h4 class="value-title">Excellence</h4>
+                        <p class="value-text">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                    </div>
+                    <div class="value-item">
+                        <div class="circle-icon bg-primary">
+                            <!-- Image of a shield and wrench icon for 'Reliability' -->
+                            <img src="https://cdn.prod.website-files.com/6677ef5c2f59c6148debf7e0/6677ef5c2f59c6148debf817_reliability.png" alt="Reliability Icon" class="icon-image-lg">
+                        </div>
+                        <h4 class="value-title">Reliability</h4>
+                        <p class="value-text">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                    </div>
+                    <div class="value-item">
+                        <div class="circle-icon bg-primary">
+                            <!-- Image of a hand holding a coin icon for 'Affordability' -->
+                            <img src="https://cdn.prod.website-files.com/6677ef5c2f59c6148debf7e0/6677ef5c2f59c6148debf818_affordability.png" alt="Affordability Icon" class="icon-image-lg">
+                        </div>
+                        <h4 class="value-title">Affordability</h4>
+                        <p class="value-text">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                    </div>
+                    <div class="value-item">
+                        <div class="circle-icon bg-primary">
+                            <!-- Image of a group of people holding up stars icon for 'Loyalty' -->
+                            <img src="https://cdn.prod.website-files.com/6677ef5c2f59c6148debf7e0/6677ef5c2f59c6148debf819_loyalty.png" alt="Loyalty Icon" class="icon-image-lg">
+                        </div>
+                        <h4 class="value-title">Loyalty</h4>
+                        <p class="value-text">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. LOCATIONS SECTION -->
+        <section class="locations section-padding text-dark-content">
+            <div class="container">
+                <h2 class="heading-dark text-center mb-10">Our Locations</h2>
+                <div class="location-cards-grid">
+                    <div class="location-card">
+                        <img src="https://images.pexels.com/photos/10593605/pexels-photo-10593605.jpeg" alt="View of Palm Jumeirah" class="rounded-lg">
+                        <div class="overlay-text">Palm Jumeirah</div>
+                    </div>
+                    <div class="location-card">
+                        <img src="https://images.pexels.com/photos/4584931/pexels-photo-4584931.jpeg" alt="View of Jumeirah Beach Residence" class="rounded-lg">
+                        <div class="overlay-text">JBR</div>
+                    </div>
+                    <div class="location-card">
+                        <img src="https://images.pexels.com/photos/3763190/pexels-photo-3763190.jpeg" alt="View of Downtown Dubai and Burj Khalifa" class="rounded-lg">
+                        <div class="overlay-text">Downtown Dubai</div>
+                    </div>
+                    <div class="location-card">
+                        <img src="https://images.pexels.com/photos/3769312/pexels-photo-3769312.jpeg" alt="View of Dubai Marina" class="rounded-lg">
+                        <div class="overlay-text">Dubai Marina</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+     <footer class="main-footer">
+        <div class="container">
+            <div class="footer-primary">
+              
+              <div class="footer-logo-black">
+                    <a href="index.html" class="footer-logo-img-wrapper">
+                      <img src="https://cdn.prod.website-files.com/6677ef5c2f59c6148debf7e0/670c127ebfda26ab4b18882f_logo.svg" alt="GearShift Logo" class="footer-logo-image">
+                    </a>
+                      <p class="footer-tagline">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam justo nec ligula eleifend efficitur.</p>
+                    </div>
+                
+                    <div class="social-links">
+    <a href="https://x.com" class="social-icon">
+        <img src="https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/logo/social-x-fill-3rwa8j21aur9zhodgo3nui.png/social-x-fill-43db2c8yhgtk6jvl72isgk.png?_a=DATAg1AAZAA0" alt="X" class="social-logo">
+    </a>
+    <a href="https://instagram.com" class="social-icon">
+        <img src="https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/3/instagram-iszk7s2ak1xrlg7set1dh.png/instagram-a0etv3l1b4i6anef7nme1m.png?_a=DATAg1AAZAA0" alt="Instagram" class="social-logo">
+    </a>
+    <a href="https://facebook.com" class="social-icon">
+        <img src="https://assets.streamlinehq.com/image/private/w_240,h_240,ar_1/f_auto/v1/icons/social-medias/social-media-facebook-20r4wgdxx18oejrcwcrep.png/social-media-facebook-t6azy2cxq3ff1t3s8vuwn.png?_a=DATAg1AAZAA0" alt="Facebook" class="social-logo">
+    </a>
+    <a href="https://whatsapp.com" class="social-icon">
+        <img src="https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/vector-icons/whatsapp-line-568o5ykq6oyotjktzytmzp.png/whatsapp-line-t8i559yekqyh6y70xsnsq.png?_a=DATAg1AAZAA0" alt="WhatsApp" class="social-logo">
+    </a>
+</div>
+                    
+                    <div class="newsletter-block">
+                        <h4 class="newsletter-title">Subscribe to our newsletter</h4>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="example@gmail.com" required>
+                            <button type="submit" class="btn btn-primary btn-submit">SUBMIT</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="footer-secondary">
+                    <h4 class="pages-title">Pages</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="fleet.html">Our Fleet</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div></footer>
+          <div class="footer-divider"></div>
+          <p class="copyright">© 2025 GearShift. All rights reserved. | Design by Moiz Waseem </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+              
 </body>
 </html>
-
