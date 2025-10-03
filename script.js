@@ -88,5 +88,53 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+document.addEventListener('DOMContentLoaded', function() {
+    // ... [Existing filter dropdown script here] ...
 
+    // --- Contact Form Validation Script ---
+    const contactForm = document.querySelector('.contact-form-layout');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(event) {
+            // Assume validation fails initially
+            let formIsValid = true; 
+
+            // Fields that must be validated
+            const requiredFields = ['firstName', 'email', 'message'];
+            
+            requiredFields.forEach(fieldId => {
+                const input = document.getElementById(fieldId);
+                const parentGroup = input.closest('.form-group');
+
+                // 1. Check if the input is empty
+                if (!input.value.trim()) {
+                    formIsValid = false;
+                    // Add an error class for visual feedback (CSS needed)
+                    parentGroup.classList.add('error'); 
+                } else {
+                    // Remove error class if field is now valid
+                    parentGroup.classList.remove('error');
+                }
+            });
+
+            // 2. Check for valid email format (only if not empty)
+            const emailInput = document.getElementById('email');
+            const emailGroup = emailInput.closest('.form-group');
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
+
+            if (emailInput.value.trim() && !emailRegex.test(emailInput.value.trim())) {
+                formIsValid = false;
+                emailGroup.classList.add('error');
+            } else if (emailGroup.classList.contains('error') && emailRegex.test(emailInput.value.trim())) {
+                emailGroup.classList.remove('error');
+            }
+
+            // Prevent form submission if validation failed
+            if (!formIsValid) {
+                event.preventDefault();
+                alert('Please fill out all required fields (First Name, Email, and Message).');
+            }
+        });
+    }
+});
 
