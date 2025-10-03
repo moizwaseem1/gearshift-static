@@ -1,13 +1,14 @@
+@import url('https://fonts.google.com/share?selection.family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900');
 :root {
-    --color-primary: #FFD700; 
+    --color-primary: #FFD700;
     --color-dark: #111111;
     --color-light: #ffffff;
-    --color-text-body: #6B7280; 
+    --color-text-body: #6B7280;
     --color-text-dark: #374151;
-    
+
     --font-base: 'Poppins', sans-serif;
     --font-size-base: 1rem;
-    
+
     --container-max-width: 1200px;
 }
 
@@ -21,13 +22,13 @@ body {
     font-family: var(--font-base);
     font-size: var(--font-size-base);
     line-height: 1.6;
-    color: var(--color-light); 
-    background-color: var(--color-dark); 
+    color: var(--color-light); /* Sets base text color */
+    background-color: var(--color-dark); /* Sets base background color */
 }
 
 h1, h2, h3, h4, h5, h6 {
     line-height: 1.2;
-    color: var(--color-light);
+    /* Color already inherits from body/dark sections, removing redundancy */
     font-weight: 700;
 }
 
@@ -44,8 +45,12 @@ a:hover {
 .container {
     max-width: var(--container-max-width);
     margin: 0 auto;
-    padding: 0 1.5rem; 
+    padding: 0 1.5rem;
 }
+
+/* ========================================================================= */
+/* --- HEADER --- */
+/* ========================================================================= */
 
 .main-header {
     position: sticky;
@@ -79,10 +84,105 @@ a:hover {
     margin-left: 2rem;
 }
 
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    color: var(--color-light);
+    cursor: pointer;
+}
+
+/* ========================================================================= */
+/* --- BUTTONS & UTILITIES --- */
+/* ========================================================================= */
+
+.btn {
+    padding: 0.6rem 1.5rem;
+    border-radius: 4px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-dark);
+}
+
+.btn-primary:hover {
+    background-color: #e6c200;
+    color: var(--color-dark);
+}
+
+.btn-large {
+    padding: 1rem 3rem;
+    font-size: 1.1rem;
+}
+
+.btn-small {
+    padding: 0.4rem 1.2rem;
+    font-size: 0.9rem;
+}
+
+.btn-full-width {
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem 1.5rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mt-6 { margin-top: 3rem !important; }
+.mt-10 { margin-top: 5rem !important; }
+
+/* ========================================================================= */
+/* --- SECTIONS (Shared Styles) --- */
+/* ========================================================================= */
+
+/* Removed redundant .featured-cars background-color */
+/* Removed redundant .locations background-color */
+/* Removed redundant .how-it-works background-color */
+/* Removed redundant .how-it-works color (inherited) */
+
+.section-padding {
+    padding: 5rem 0; /* Assuming a common section padding */
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.5rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    /* Color already inherits from body/h tags, removing redundancy */
+}
+
+.section-content-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+/* ========================================================================= */
+/* --- HOME PAGE SECTIONS --- */
+/* ========================================================================= */
+
+/* --- HERO SECTION --- */
+
 .hero-section {
     position: relative;
-    background: url('https://images.pexels.com/photos/164654/pexels-photo-164654.jpeg') no-repeat center center/cover; 
-    height: 90vh; 
+    background: url('https://images.unsplash.com/photo-1708063786256-840b2b468e58?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+    height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -95,7 +195,7 @@ a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7); 
+    background: rgba(0, 0, 0, 0.7);
 }
 
 .hero-content {
@@ -120,9 +220,11 @@ a:hover {
     color: var(--color-text-body);
 }
 
+/* --- STATS SECTION (Home Page) --- */
+
 .stats-section {
     padding: 4rem 0;
-    background-color: var(--color-dark);
+    /* background-color: var(--color-dark); - Removed redundancy */
 }
 
 .stats-grid {
@@ -134,7 +236,7 @@ a:hover {
 
 .stat-item {
     padding: 1.5rem;
-    border: 1px solid rgba(255, 215, 0, 0.2); 
+    border: 1px solid rgba(255, 215, 0, 0.2);
     border-radius: 8px;
     background-color: #1a1a1a;
 }
@@ -153,185 +255,392 @@ a:hover {
     letter-spacing: 1px;
 }
 
-.btn-large {
-    padding: 1rem 3rem;
-    font-size: 1.1rem;
-}
-
-.btn {
-    padding: 0.6rem 1.5rem;
-    border-radius: 4px;
-    font-weight: 600;
-    text-transform: uppercase;
-    display: inline-block;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.btn-primary {
-    background-color: var(--color-primary);
-    color: var(--color-dark); 
-}
-
-.btn-primary:hover {
-    background-color: #e6c200; 
-    color: var(--color-dark);
-}
-
-.menu-toggle {
-    display: none; 
-    background: transparent;
-    border: none;
-    font-size: 2rem;
-    color: var(--color-light);
-    cursor: pointer;
-}
-
-
-.main-footer {
-    background-color: #0d0d0d;
-    padding: 4rem 0 1.5rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.footer-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
-    margin-bottom: 3rem;
-}
-
-.footer-col h4 {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-    color: var(--color-primary);
-}
-
-.footer-col ul {
-    list-style: none;
-}
-
-.footer-col ul li {
-    margin-bottom: 0.5rem;
-}
-
-.footer-col p {
-    color: var(--color-text-body);
-    font-size: 0.95rem;
-    margin-bottom: 0.5rem;
-}
-
-.newsletter-form {
-    display: flex;
-    margin-top: 1rem;
-}
-
-.newsletter-form input {
-    padding: 0.6rem;
-    border: 1px solid var(--color-text-body);
-    background-color: var(--color-dark);
-    color: var(--color-light);
-    border-radius: 4px 0 0 4px;
-    flex-grow: 1;
-}
-
-.newsletter-form .btn-primary {
-    border-radius: 0 4px 4px 0;
-    padding: 0.6rem 1rem;
-}
-
-.copyright {
-    text-align: center;
-    padding-top: 1.5rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    font-size: 0.85rem;
-    color: var(--color-text-body);
-}
-
-.section-padding {
-    padding: 6rem 0;
-}
-
-.page-hero {
-    background-color: #1a1a1a;
-    padding: 4rem 0;
-    text-align: center;
-    border-bottom: 3px solid var(--color-primary);
-}
-
-.page-hero h1 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
-}
-
-.page-hero p {
-    color: var(--color-text-body);
-}
-
+/* --- FEATURED CARS (Home Page) --- */
 
 .car-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.featured-car-card {
+    padding: 0;
+    background-color: var(--color-dark);
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-car-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.6);
+}
+
+.card-image-wrapper {
+    position: relative;
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+}
+
+.car-image {
+    height: 220px;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.car-year {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: var(--color-primary);
+    color: var(--color-dark);
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    z-index: 5;
+}
+
+.featured-car-card .card-content {
+    padding: 1rem 1.5rem 1.5rem;
+}
+
+.featured-car-card .car-name {
+    font-size: 1.5rem;
+    color: var(--color-light);
+    margin-bottom: 0.5rem;
+}
+
+.featured-car-card .car-price {
+    font-size: 1rem;
+    color: var(--color-text-body);
+    margin-bottom: 1rem;
+}
+
+.featured-car-card .price-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.car-specs-grid {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.spec-item {
+    text-align: center;
+    flex: 1;
+}
+
+.spec-icon {
+    font-size: 0;
+    display: block;
+    margin-bottom: 0.3rem;
+    height: 24px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-image {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
+.spec-value {
+    font-size: 0.85rem;
+    color: var(--color-text-body);
+    line-height: 1.2;
+}
+
+/* --- LOCATIONS SECTION (Home Page) --- */
+
+.locations .section-title {
+    font-size: 2.5rem;
+    /* color: var(--color-light); - Removed redundancy */
+    margin-bottom: 2.5rem;
+}
+
+.locations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 1.5rem;
 }
 
-.car-card {
-    background-color: #1a1a1a;
-    border-radius: 8px;
+.location-card {
+    border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.car-card:hover {
+.location-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
 }
 
-.car-image {
+.location-image-wrapper {
+    position: relative;
     width: 100%;
-    height: 200px; 
+    height: 300px;
+}
+
+.location-image {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
 }
 
-.card-content {
-    padding: 1.5rem;
+.location-card:hover .location-image {
+    transform: scale(1.05);
 }
 
-.car-name {
-    font-size: 1.6rem;
-    margin-bottom: 0.5rem;
-    color: var(--color-primary);
+.location-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.7) 100%);
+    z-index: 1;
 }
 
-.car-spec {
-    font-size: 0.9rem;
-    color: var(--color-text-body);
-    margin-bottom: 1rem;
+.location-name {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    font-size: 1.8rem;
+    /* color: var(--color-light); - Removed redundancy */
+    font-weight: 600;
+    z-index: 2;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
-.spec-detail:not(:last-child)::after {
-    content: " | ";
-    color: rgba(255, 255, 255, 0.3);
+/* --- HOW IT WORKS SECTION (Home Page) --- */
+
+.how-it-works .section-title {
+    /* color: var(--color-light); - Removed redundancy */
+    margin-bottom: 4rem;
 }
 
-.car-price {
-    font-size: 1rem;
-    color: var(--color-light);
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem 1.5rem;
+    text-align: center;
+}
+
+.step-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.step-icon-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.price-value {
-    font-size: 2rem;
+.step-icon {
+    font-size: 3.5rem;
+    line-height: 1;
+}
+
+.step-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    /* color: var(--color-light); - Removed redundancy */
+    margin-bottom: 0.75rem;
+}
+
+.step-description {
+    font-size: 1rem;
+    /* color: var(--color-light); - Removed redundancy */
+    max-width: 250px;
+}
+
+/* ========================================================================= */
+/* --- FOOTER --- */
+/* ========================================================================= */
+
+.main-footer {
+    /* background-color: var(--color-dark); - Removed redundancy */
+    padding: 4rem 0 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-primary {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Structure adjusted to match new HTML classes */
+    gap: 4rem;
+    margin-bottom: 3rem;
+    align-items: start;
+}
+
+/* The original CSS used .footer-content-grid, changing to use .footer-primary as a grid wrapper */
+/* Removing old .footer-content-grid */
+
+
+.footer-logo-img-wrapper {
+    display: block; /* Ensure it behaves like a block for margin control */
+    margin-bottom: 0.5rem; /* Space between logo and tagline */
+    width: fit-content; /* Only take up content width */
+}
+
+
+.footer-logo-image {
+    height: 40px; /* Adjust as needed for the desired size, e.g., 35px, 40px */
+    width: auto !important; /* Maintain aspect ratio */
+    filter: brightness(1) invert(0); /* Ensures a black SVG logo turns white on dark background */
+}
+
+
+.footer-tagline {
+    color: var(--color-text-body);
+    font-size: 0.83rem; /* Keep this smaller size */
+    line-height: 1.6;
+    margin-bottom: 0rem; /* Ensure proper spacing before social links */
+    max-width: 400px;
+}
+
+.social-links {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 0rem;
+}
+
+.social-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    color: var(--color-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: opacity 0.3s ease;
+}
+
+.social-logo {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    filter: brightness(1) invert(0);
+}
+
+.social-icon:hover {
+    opacity: 0.8;
+    /* color: var(--color-dark); - Removed redundancy */
+}
+
+.newsletter-block {
+    /* Styles for the newsletter form area */
+}
+
+.newsletter-title { /* Original CSS used .newsletter-group h4 */
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+    /* color: var(--color-light); - Removed redundancy */
+}
+
+.newsletter-form { /* Original CSS used .newsletter-form-new */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 350px;
+}
+
+.newsletter-form input {
+    padding: 1rem 1.25rem;
+    border: none;
+    background-color: var(--color-light);
+    color: var(--color-dark);
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.btn-submit { /* Original CSS used .btn-submit class */
+    padding: 1rem 1.25rem;
+    text-transform: uppercase;
+    font-size: 1rem;
     font-weight: 700;
+    border-radius: 4px;
+    /* Assuming this is a .btn-primary */
+}
+
+.footer-divider {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    margin-bottom: 2rem;
+}
+
+.footer-secondary {
+    /* Container for pages links */
+}
+
+.pages-title { /* Original CSS used .pages-col h4 */
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+    /* color: var(--color-light); - Removed redundancy */
+}
+
+.footer-links { /* Original CSS used .footer-links-list */
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-links li a {
+    color: var(--color-text-body);
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links li a:hover {
     color: var(--color-primary);
 }
-
-.btn-small {
-    padding: 0.4rem 1.2rem;
-    font-size: 0.9rem;
+.copyright {
+    /* Center alignment and slight padding removed from previous global version */
+    text-align: center; 
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 0.75rem; /* Smaller font size */
+    color: var(--color-text-body); /* Using text body color for a subtle look */
+    /* Ensure it aligns neatly below the divider */
+    margin-top: 1rem; 
 }
+
+/* Removed .copyright as it wasn't present in the HTML provided, but keep if needed for the real footer */
+
+/* ========================================================================= */
+/* --- SERVICES / OFFERS / CONTACT (Legacy) --- */
+/* ========================================================================= */
+
+/* Removed old .car-card styles (superseded by .featured-car-card) */
+/* Removed old .car-spec styles (superseded by .car-specs-grid) */
+/* Removed old .spec-detail styles (superseded by .spec-item) */
 
 .service-grid {
     display: grid;
@@ -358,22 +667,16 @@ a:hover {
 .service-card h3 {
     margin-bottom: 0.75rem;
     font-size: 1.5rem;
+    color: var(--color-light); /* Needs to be explicitly light if inside a dark card */
 }
 
 .service-card p {
     color: var(--color-text-body);
 }
 
-.section-content-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 3rem;
-    align-items: start;
-}
-
 .contact-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr; 
+    grid-template-columns: 2fr 1fr;
     gap: 4rem;
 }
 
@@ -394,7 +697,7 @@ a:hover {
 }
 
 .offer-card.featured {
-    transform: scale(1.05); 
+    transform: scale(1.05);
     border-color: var(--color-primary);
     background-color: #222222;
 }
@@ -402,7 +705,7 @@ a:hover {
 .offer-card h2 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
-    color: var(--color-light);
+    /* color: var(--color-light); - Removed redundancy */
 }
 
 .offer-price {
@@ -432,7 +735,7 @@ a:hover {
 
 .offer-card ul li {
     padding: 0.5rem 0;
-    color: var(--color-light);
+    /* color: var(--color-light); - Removed redundancy */
     border-bottom: 1px dashed rgba(255, 255, 255, 0.05);
 }
 
@@ -449,16 +752,6 @@ a:hover {
     color: var(--color-primary);
     margin-right: 0.5rem;
     font-weight: 700;
-}
-
-@media (max-width: 992px) {
-    .contact-grid {
-        grid-template-columns: 1fr; 
-    }
-    .contact-info {
-        padding-top: 2rem;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-    }
 }
 
 .contact-form {
@@ -500,10 +793,10 @@ a:hover {
 }
 
 .error-message {
-    color: #ff4d4d; 
+    color: #ff4d4d;
     font-size: 0.9rem;
     display: block;
-    height: 1.2rem; 
+    height: 1.2rem;
 }
 
 .form-group.error input,
@@ -516,8 +809,226 @@ a:hover {
     padding: 1rem 0;
     text-align: center;
     font-weight: 600;
-    display: none; 
+    display: none;
 }
+
+
+/* ========================================================================= */
+/* --- ABOUT PAGE SPECIFIC STYLES --- */
+/* ========================================================================= */
+
+.about-hero {
+    /* background-color: var(--color-dark); - Removed redundancy */
+    /* color: var(--color-light); - Removed redundancy */
+    padding: 6rem 0;
+    text-align: center;
+
+    background-image: url('https://images.unsplash.com/photo-1708063786256-840b2b468e58?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    z-index: 1;
+}
+
+.about-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+/* Removed redundant .about-hero .container styles */
+
+.hero-title-large {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    /* color: var(--color-light); - Removed redundancy */
+}
+
+.hero-subtitle-light {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* --- JOURNEY & MISSION SECTION --- */
+
+.about-journey {
+    /* Uses the default white background for this section (if you want white, override body style here) */
+    background-color: var(--color-dark);
+}
+
+.heading-dark {
+    font-size: 2.2rem;
+    color: var(--color-dark);
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+
+.heading-light{
+    font-size: 2.2rem;
+    /* color: var(--color-light); - Removed redundancy (already in h tags) */
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    }
+
+.paragraph-lg {
+    font-size: 1.1rem;
+    color: var(--color-text-body);
+    line-height: 1.8;
+}
+
+.image-full-width img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+/* --- FOUNDER & LEADERSHIP SECTION --- */
+
+.about-leadership {
+    /* Set back to dark color to match design */
+    background-color: var(--color-dark);
+}
+
+.founder-image-wrapper {
+    max-width: 400px;
+    margin: 2rem auto;
+}
+
+.founder-image-wrapper img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+/* --- STATS SECTION (About Page) --- */
+
+.about-stats {
+    background-color: var(--color-dark);
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.about-stats .stats-grid { /* Overrides the gap from the Home page stats */
+    gap: 3rem;
+}
+
+.about-stats .stat-item {
+    background: none;
+    padding: 0;
+    border: none;
+}
+
+.about-stats .stat-number {
+    font-size: 4rem; /* Larger font size for this page */
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.about-stats .stat-label {
+    font-size: 1.4rem;
+    font-weight: 600;
+    /* color: var(--color-light); - Removed redundancy */
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.about-stats .stat-text {
+    font-size: 1rem;
+    color: var(--color-text-body);
+}
+
+
+/* --- CORE VALUES SECTION --- */
+
+.core-values {
+    /* Set back to dark color to match design */
+    background-color: var(--color-dark);
+    padding: 4rem 0 6rem;
+}
+
+.value-blocks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.value-item {
+    text-align: center;
+}
+
+.circle-icon {
+    background-color: var(--color-primary);
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.icon-image-lg {
+    width: 48px;
+    height: 48px;
+    /* Filter should be set to INVERT(1) to make a black SVG icon white on a primary background */
+    filter: brightness(1) invert(1);
+}
+
+.value-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    /* color: var(--color-light); - Removed redundancy */
+    margin-bottom: 0.5rem;
+}
+
+/* --- LOCATIONS SECTION (About Page) --- */
+
+.location-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.location-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.location-card img {
+    width: 100%;
+    height: 100%;
+    min-height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.overlay-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+    /* color: var(--color-light); - Removed redundancy */
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+
+/* ========================================================================= */
+/* --- RESPONSIVENESS --- */
+/* ========================================================================= */
 
 @media (min-width: 992px) {
     .section-content-grid {
@@ -525,14 +1036,30 @@ a:hover {
     }
 }
 
+@media (max-width: 992px) {
+    .footer-primary {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    .contact-info {
+        padding-top: 2rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}
+
 @media (max-width: 768px) {
+    /* Header/Navigation */
     .nav-links {
         display: none;
         flex-direction: column;
         width: 100%;
         background-color: #1a1a1a;
         position: absolute;
-        top: 65px; 
+        top: 65px;
         left: 0;
         padding: 1rem 0;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
@@ -546,18 +1073,20 @@ a:hover {
         padding: 0.8rem 1rem;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
-    
+
     .nav-links li:last-child a {
         border-bottom: none;
     }
-    
+
     .nav-links.open {
         display: flex;
     }
 
     .menu-toggle {
-        display: block; 
+        display: block;
     }
+
+    /* General Layout */
     .hero-section {
         height: 70vh;
     }
@@ -567,30 +1096,510 @@ a:hover {
     .hero-subtitle {
         font-size: 1rem;
     }
+
+    .stats-grid, .value-blocks-grid, .location-cards-grid, .car-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-title-large {
+        font-size: 2.5rem;
+    }
+    .stat-number {
+        font-size: 3rem;
+    }
+    .section-title {
+        font-size: 2rem;
+    }
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 1.5rem;
+    }
+    .section-header .btn-primary {
+        margin-top: 0.75rem;
+    }
+    .locations .section-title {
+        font-size: 2rem;
+    }
+    .steps-grid {
+        grid-template-columns: 1fr;
+    }
 }
-@media (min-width: 576px) { 
+
+@media (max-width: 576px) {
+    /* The original block was misplaced and incorrect, correcting here */
     .service-grid {
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     }
-    
+}
+
 @media (max-width: 500px) {
     .container {
-        padding: 0 1rem; 
+        padding: 0 1rem;
     }
-    
+
     .hero-title {
         font-size: 2rem;
     }
-    
+
     .hero-subtitle {
         font-size: 1rem;
     }
-    
+
     .btn-large {
-        padding: 0.8rem 2rem; 
+        padding: 0.8rem 2rem;
         font-size: 1rem;
     }
     .stats-section {
         padding: 2.5rem 0;
+    }
+}
+/* ========================================================================= */
+/* --- CONTACT PAGE SPECIFIC STYLES --- */
+/* ========================================================================= */
+
+.contact-section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.contact-header .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-header .section-subtitle {
+    font-size: 1.1rem;
+    color: var(--color-text-body);
+    margin-bottom: 2rem;
+}
+
+/* --- Contact Info Grid (Email/Phone) --- */
+
+.contact-info-grid {
+    display: flex;
+    flex-wrap: wrap; /* Allows stacking on small screens */
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.contact-info-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Styles for the contact details */
+}
+
+.contact-icon-circle {
+    /* Use the same orange circle style as your other sections */
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+/* Style for the icons inside the circle, assuming small icons */
+.contact-icon-circle .icon-image-sm {
+    width: 30px;
+    height: 30px;
+    filter: brightness(1) invert(1); /* Turns black icons white/light */
+}
+
+.contact-label {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: var(--color-light);
+}
+
+.contact-detail {
+    font-size: 1rem;
+    color: var(--color-text-body);
+    /* Remove hover effect for standard contact links if preferred */
+}
+.contact-detail:hover {
+    color: var(--color-primary);
+}
+
+
+/* --- Contact Form Card --- */
+
+.contact-form-card {
+    background-color: var(--color-dark); /* White card background */
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    margin: 0 auto; /* Center the form card */
+}
+
+.contact-form-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns for names, one for everything else */
+    gap: 1.5rem;
+}
+
+.form-group {
+    /* Base margin for groups is managed by the grid gap */
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1; /* Makes the message box span both columns */
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--color-text-light); /* Dark text for label on light background */
+    font-size: 0.95rem;
+}
+
+.contact-form-layout input,
+.contact-form-layout textarea {
+    width: 100%;
+    padding: 1rem 1.25rem;
+    background-color: #f7f7f7; /* Very light background for input fields */
+    border: 1px solid #e5e7eb;
+    color: var(--color-text-dark); 
+    border-radius: 8px; /* Rounded input fields */
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form-layout input:focus,
+.contact-form-layout textarea:focus {
+    border-color: var(--color-primary);
+    background-color: var(--color-light);
+    outline: none;
+}
+
+.contact-form-layout textarea {
+    resize: vertical;
+}
+
+.form-footer {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+}
+
+/* Adjust social icons placement within the form footer */
+.social-links-form {
+    display: flex;
+    gap: 0.5rem;
+}
+.social-links-form .social-icon {
+    /* Override global social icon styles if needed, but they should generally work */
+    width: 40px; 
+    height: 40px;
+    background-color: var(--color-primary); /* Yellow background */
+    border-radius: 50%;
+    color: var(--color-dark);
+}
+
+/* --- Media Queries for Mobile --- */
+
+@media (max-width: 768px) {
+    .contact-form-layout {
+        grid-template-columns: 1fr; /* Stack all form fields on mobile */
+    }
+    .form-footer {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: flex-start;
+    }
+    .btn-large {
+        width: 100%; /* Full width button on mobile */
+    }
+    .contact-form-card {
+        padding: 1.5rem;
+    }
+    .contact-info-grid {
+        flex-direction: column; /* Stack contact info vertically */
+    }
+}
+/* ========================================================================= */
+/* --- HERO SECTION FOR FLEET PAGE --- */
+/* ========================================================================= */
+
+.hero-fleet {
+    position: relative;
+    height: 60vh; /* Adjust height as needed */
+    background-image: url('https://images.unsplash.com/photo-1708063786256-840b2b468e58?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Use your background image */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay to make text readable */
+}
+
+.hero-fleet .hero-content {
+    position: relative;
+    z-index: 10;
+    color: var(--color-light); /* White text */
+}
+
+.hero-fleet .hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--color-light); /* Or use var(--color-primary) if you want the text orange/yellow */
+}
+
+.hero-fleet .hero-subtitle {
+    font-size: 1.1rem;
+    font-weight: 300;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ========================================================================= */
+/* --- FILTER DROPDOWNS --- */
+/* ========================================================================= */
+
+.fleet-listing-section {
+    background-color: var(--color-dark); /* Light grey background outside the container */
+}
+
+.filter-card-wrapper {
+    margin-top: -3rem; /* Pull filters up over the hero image/section */
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column; /* Stack filters vertically */
+    gap: 1rem;
+}
+
+.filter-dropdown {
+    background-color: var(--color-dark); /* White background for the card */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb;
+}
+
+.filter-toggle {
+    width: 100%;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-text-light);
+}
+
+/* Style for the active/open filter button - the orange border */
+.filter-dropdown.active {
+    border: 1px solid var(--color-primary);
+}
+
+.filter-dropdown.active .filter-toggle {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+/* Arrow Icon styling (using CSS for the arrow direction) */
+.filter-toggle .arrow-icon {
+    display: inline-block;
+    width: 0; 
+    height: 0; 
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid var(--color-text-light); /* Default down arrow */
+    transition: transform 0.3s ease;
+}
+/* Up arrow when active */
+.filter-dropdown.active .arrow-icon {
+    transform: rotate(180deg);
+    border-top-color: var(--color-primary);
+}
+
+/* Content list styling */
+.filter-content {
+    /* Initially hidden. Use JS to toggle display: block or max-height */
+    /* For CSS layout, we'll keep it visible but style the content */
+    padding: 0 1.5rem;
+    max-height: 0; /* Use this with JS to transition height */
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+}
+/* Show content when active */
+.filter-dropdown.active .filter-content {
+    max-height: 300px; /* Large enough value to cover content */
+    padding-bottom: 1.5rem;
+}
+
+.filter-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.filter-list li {
+    padding: 0.5rem 0;
+    font-size: 0.95rem;
+    color: var(--color-text-light);
+    cursor: pointer;
+}
+.filter-list li:hover {
+    color: var(--color-primary);
+}
+
+
+/* ========================================================================= */
+/* --- CAR LISTING GRID & CARD --- */
+/* ========================================================================= */
+
+.car-listing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.car-card {
+    background-color: var(--color-dark); /* White card background */
+    border-radius: 12px;
+    overflow: hidden; /* Keeps image corners rounded */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.car-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.car-image-container {
+    position: relative;
+    height: 200px; /* Fixed height for consistent card size */
+    overflow: hidden;
+}
+
+.car-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.car-year {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--color-primary);
+    color: var(--color-dark); /* Text color on the orange/yellow chip */
+    padding: 0.25rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.car-details {
+    padding: 1rem 1.25rem;
+}
+
+.car-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: var(--color-light);
+}
+
+.car-price {
+    font-size: 1rem;
+    color: var(--color-text-body);
+    margin-bottom: 1rem;
+}
+
+.car-price .price-bold {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-right: 0.25rem;
+}
+
+/* Car Specifications Row */
+.car-specs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 0.75rem 0;
+    margin-bottom: 1.5rem;
+}
+
+.spec-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 0.75rem;
+    color: var(--color-text-body);
+    width: 25%; /* To ensure 4 items fit nicely */
+}
+
+.spec-icon {
+    width: 20px;
+    height: 20px;
+    margin-bottom: 0.25rem;
+    /* Use a filter to color SVG icons to match the design (e.g., orange/dark grey) */
+    /* Example to color a white/black SVG icon to a dark gray for this section: */
+    /* filter: grayscale(100%) brightness(50%); */
+}
+
+.btn-full-width {
+    width: 100%;
+    text-align: center;
+}
+
+/* Pagination Footer */
+.pagination-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.pagination-footer .btn-secondary {
+    /* Styling for 'Previous' button - using the lighter orange/primary color */
+    background-color: var(--color-primary-light);
+    color: var(--color-dark);
+    border: none;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+}
+.pagination-footer .btn-secondary:hover {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 600px) {
+    .hero-fleet {
+        height: 40vh;
+    }
+    .hero-fleet .hero-title {
+        font-size: 2.5rem;
+    }
+    .filter-card-wrapper {
+        margin-top: -2rem;
     }
 }
