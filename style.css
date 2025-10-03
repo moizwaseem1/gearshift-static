@@ -1603,3 +1603,34 @@ a:hover {
         margin-top: -2rem;
     }
 }
+/* --- Location Cards Responsiveness (Fix) --- */
+/* Target screens smaller than 768px (standard tablet/mobile breakpoint) */
+@media (max-width: 768px) {
+    
+    /* Assuming your grid container for locations is named .location-grid */
+    .location-grid {
+        /* Change from a 2x2 grid to a 1-column grid on mobile */
+        grid-template-columns: 1fr; 
+        /* Increase the gap for better spacing */
+        gap: 1.5rem; 
+    }
+
+    /* Optional: Ensure the card image maintains aspect ratio and corner radius */
+    .location-card-image {
+        /* Ensure the image container scales properly */
+        height: 200px; 
+    }
+
+    /* Optional: Center the heading on mobile if it wasn't already */
+    .location-section h2 {
+        text-align: center;
+    }
+}
+
+/* Ensure the base grid layout is flexible */
+.location-grid {
+    display: grid;
+    /* Default for desktop/larger screens: a responsive 2x2 grid */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 1.5rem;
+}
